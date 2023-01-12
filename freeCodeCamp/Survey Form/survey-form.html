@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="survey-form.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Silkscreen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- header section start -->
+  <header>
+    <h1 id="title"><a href="https://syahmiz.github.io/">Portfolio Website</a> <span style="color: blue; background: white;">Survey</span></h1>
+  </header>
+<!-- header section end -->
+
+<!-- survey form section start -->
+<section class="survey-form">
+  <p id="description">
+    <span style="color: yellow">Note:</span> &nbsp &nbsp <span style="color: yellow">1.</span> Click <a href="https://syahmiz.github.io/" style="text-decoration: none; font-weight: bold; color: blue;">here</a>
+    (if you <span style="color: yellow">haven't</span> already seen my <span style="color: yellow">Portfolio Website</span>).<br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span style="color: yellow">2. Return</span> to this page and <span style="color: yellow">complete</span> the <span style="color: yellow">survey form</span>.
+  </p>
+  <br><br>
+  <form id="survey-form" name="submit-to-google-sheet">
+    <label for="name" id="name-label"><span style="color: yellow">N</span>ame</label>
+    <input class="box-name-email" id="name" type="text" name="Name" placeholder="Syahmi Roslee" required>
+    <br><br>
+
+    <label for="email" id="email-label"><span style="color: yellow">E</span>mail</label>
+    <input class="box-name-email" id="email" type="email" name="Email" placeholder="syahmiros96@gmail.com" required>
+    <br><br>
+
+    <label for="number" id="number-label"><span style="color: yellow">A</span>ge</label>
+    <input class="box-age" id="number" type="number" name="Age" min="12" max="90" placeholder="20" required>
+    <br><br><br><br><br>
+
+    <label class="dropdown" for="dropdown"><span style="color: yellow">Level</span> of my <span style="color: yellow">Portfolio Website</span>.</label>
+    <select id="dropdown" name="Dropdown">
+      <option name="Dropdown" value="Beginner">Beginner</option>
+      <option name="Dropdown" value="Intermidiate">Intermidiate</option>
+      <option name="Dropdown" value="Advance">Advance</option>
+      <option name="Dropdown" value="Expert">Expert</option>
+    </select>
+    <br><br><br><br><br>
+
+    <label class="radio" for="radio"><span style="color: yellow">Project</span> should I work on <span style="color: yellow">next</span>.</label><br>
+    <input id="radio" type="radio" name="Radio" value="Personal"><label class="radio">&nbsp <span style="color: yellow">P</span>ersonal &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label></input><br>
+    <input id="radio" type="radio" name="Radio" value="freeCodeCamp"><label class="radio">&nbsp free<span style="color: yellow">C</span>ode<span style="color: yellow">C</span>amp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label></input><br>
+    <input id="radio" type="radio" name="Radio" value="Freelance"><label class="radio">&nbsp <span style="color: yellow">F</span>reelance &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label></input>
+    <br><br><br><br><br>
+
+    <label class="checkbox" for="checkbox">What <span style="color: yellow">Languages</span> should I <span style="color: yellow">focus</span> on ?</label><br>
+    <input id="checkbox" type="checkbox" name="Checkbox" value="HTML"><label class="checkbox">&nbsp <span style="color: yellow">H</span>TML</label></input><br>
+    <input id="checkbox" type="checkbox" name="Checkbox" value="CSS"><label class="checkbox">&nbsp <span style="color: yellow">C</span>SS</label></input><br>
+    <input id="checkbox" type="checkbox" name="Checkbox" value="JavaScript"><label class="checkbox">&nbsp <span style="color: yellow">J</span>ava<span style="color: yellow">S</span>cript</label></input><br>
+    <input id="checkbox" type="checkbox" name="Checkbox" value="Python"><label class="checkbox">&nbsp <span style="color: yellow">P</span>ython</label></input><br>
+    <input id="checkbox" type="checkbox" name="Checkbox" value="PHP"><label class="checkbox">&nbsp <span style="color: yellow">P</span>HP</label></input><br>
+    <input id="checkbox" type="checkbox" name="Checkbox" value="Typescript"><label class="checkbox">&nbsp <span style="color: yellow">T</span>ypescript</label></input><br>
+    <input id="checkbox" type="checkbox" name="Checkbox" value="C++"><label class="checkbox">&nbsp C<span style="color: yellow">++</span></label></input><br>
+    <input id="checkbox" type="checkbox" name="Checkbox" value="Angular"><label class="checkbox">&nbsp <span style="color: yellow">A</span>ngular</label></input>
+    <br><br><br><br><br>
+
+    <textarea id="textarea" type="textarea" name="Textarea" placeholder="Feedback about my Portfolio Website." required></textarea>
+    <br>
+
+    <button id="submit">Submit</button>
+
+  </form>
+  <span id="msg"></span>
+</section>
+
+<!-- js store data -->
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwIZ2ni6LNMUvGZL44hQgEa2yNtm6pFMD28yryE4y4aGpuLNq0G3xK_xgiBMfsvPSJw8g/exec'
+  const form = document.forms['submit-to-google-sheet']
+  constmsg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response =>{
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<!-- js only one checkbox can tick -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+      $('input:checkbox').click(function() {
+          $('input:checkbox').not(this).prop('checked', false);
+      });
+  });
+  </script>
+<!-- survey form section end -->
+
+
+
+</body>
+</html>

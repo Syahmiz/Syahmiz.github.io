@@ -1,0 +1,287 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+@keyframes transitionSlide{
+  from{
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to{
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+body{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(images/1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* header section start */
+header h1{
+  position: static;
+  height: 0%;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 30px;
+  animation: transitionSlide .5s;
+}
+
+header a{
+  background: white;
+  color: black;
+  text-decoration: none;
+  transition: .5s;
+}
+header a:hover{
+  color: green;
+  font-size: 31px;
+  font-weight: bold;
+}
+/* header section end */
+
+/* survey section start */
+.survey-form{
+  width: 1100px;
+  margin: auto auto 20px auto;
+  padding: 10px 10px 0 50px;
+  background: black;
+  border-radius: 30px;
+  border: 1px solid yellow;
+  animation: transitionSlide 2s;
+}
+
+#description{
+  font-size: 30px;
+}
+
+form input.box-name-email{
+  border: 0;
+  margin: 15px 10px;
+  padding: 15px 0px 15px 10px;
+  outline: none;
+  background: #f5f5f5;
+  color: black;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 85%;
+}
+form .box-age{
+  border: 0;
+  margin: 15px 20px;
+  padding: 15px 1px 15px 10px;
+  outline: none;
+  background: #f5f5f5;
+  color: black;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 70px;
+}
+
+#name-label{
+  font-size: 30px;
+}
+#email-label{
+  font-size: 30px;
+  padding-left: 10px;
+}
+#number-label{
+  font-size: 30px;
+  padding: 0 0 0 21px;
+}
+
+.dropdown{
+  font-size: 30px;
+  margin: 100px 0 100px 0;
+}
+#dropdown{
+  margin: 0 0 0 10px;
+  border-radius: 5px;
+  font-size: 30px;
+  border: 1px solid yellow;
+  background: black;
+}
+
+.radio{
+  font-size: 30px;
+}
+input[type=radio]{
+  border: 0px;
+  width: 5%;
+  height: 20px;
+}
+
+.checkbox{
+  font-size: 30px;
+}
+input[type=checkbox]{
+  width: 5%;
+  height: 20px;
+}
+
+textarea{
+  border: 0;
+  margin: 15px 1px;
+  padding: 10px 0px 10px 10px;
+  outline: none;
+  background: #f5f5f5;
+  color: black;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 1040px;
+  height: 200px;
+}
+
+#submit{
+  font-weight: bold;
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  padding: 5px 0 5px 0;
+  margin: 10px 0 50px 0;
+  width: 96%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .5s;
+}
+#submit:hover{
+  background-color: yellow;
+  font-size: 30px;
+}
+#submit:active{
+  opacity: 0.7;
+}
+
+#msg{
+  color: rgb(0, 255, 0);
+  font-weight: bold;
+  padding: 0 0 50px 39%;
+  display: block;
+}
+/* survey section end */
+
+@media(max-width: 480px){
+  body{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(images/1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  /* header section start */
+  header h1{
+    font-size: 15px;
+    width: 100%;
+  }
+  header a:hover{
+    color: green;
+    font-size: 15px;
+  }
+  /* header section end */
+
+  /* survey section start */
+  .survey-form{
+    width: 99%;
+    margin: 0 1px 0 1px;
+    padding: 20px 0 0 0;
+  }
+
+  #description{
+    font-size: 13px;
+    padding: 0 0 0 15px;
+  }
+
+  form input.box-name-email{
+    margin: 15px 10px;
+    padding: 15px 0px 15px 10px;
+    font-size: 12px;
+    width: 92%;
+  }
+  form .box-age{
+    margin: 15px 10px;
+    padding: 15px 0px 15px 10px;
+    font-size: 12px;
+    width: 92%;
+  }
+
+  #name-label{
+    font-size: 15px;
+    padding-left: 42%;
+  }
+  #email-label{
+    font-size: 15px;
+    padding-left: 43%;
+  }
+  #number-label{
+    font-size: 15px;
+    padding-left: 44%;
+  }
+
+  .dropdown{
+    font-size: 17px;
+    padding: 0 0 0 10px;
+    margin: 100px 0 100px 0;
+  }
+  #dropdown{
+    margin: 10px 0 0 10px;
+    font-size: 17px;
+  }
+
+  .radio{
+    font-size: 17px;
+    padding: 0 0 0 10px;
+  }
+  input[type=radio]{
+    margin: 0 0 0 10px;
+    width: 3%;
+    height: 12px;
+  }
+
+  .checkbox{
+    font-size: 17px;
+    padding: 0 0 0 10px;
+  }
+  input[type=checkbox]{
+    margin: 0 0 0 10px;
+    width: 5%;
+    height: 10px;
+  }
+
+  textarea{
+    margin: 10px 1px 0 7px;
+    padding: 10px 0px 10px 5px;
+    width: 95%;
+    height: 200px;
+  }
+
+  #submit{
+    font-size: 15px;
+    margin: 20px 0 50px 0;
+    width: 100%;
+    transition: 0s;
+  }
+  #submit:hover{
+    background-color: yellow;
+    font-size: 15px;
+  }
+  /* survey section end */
+  #msg{
+    color: rgb(0, 255, 0);
+    font-weight: bold;
+    padding: 0 0 50px 20%;
+    display: block;
+  }
+}

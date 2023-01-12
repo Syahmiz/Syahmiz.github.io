@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+</head>
+<body>
+
+<!-- header section start-->
+<section class="header">
+    <nav>
+        <label class="logo" onclick="window.location.reload()"><a href="index.html">S<span style="color: rgb(0, 38, 255)">z</span></a></label>
+        <ul>
+            <li><a href="index.html"><span style="color: yellow; font-size: 30px">.</span>Home</a></li>
+            <li><a href="skills.html"><span style="color: yellow; font-size: 30px">.</span>Skills</a></li>
+            <li><a href="projects.html"><span style="color: yellow; font-size: 30px">.</span>Projects</a></li>
+            <li><a href="contact.html"><span style="color: yellow; font-size: 30px">.</span>Contact</a></li>
+        </ul>
+        <label id="icon">
+            <i class="fa fa-bars"></i>
+        </label>
+    </nav>
+
+<!-- js tab show close for web app start-->
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script>
+$(document).ready(function(){
+    $('#icon').click(function(){
+        $('ul').toggleClass('show');
+    });
+});
+</script>
+<!-- header section end-->
+
+<!-- contact section start -->
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1><span style="color: yellow;">C</span>ontact <span style="color: yellow;">M</span>e<span style="color: yellow;">!</span></h1>
+                <p><a href="mailto: syahmiros96@gmail.com"><i class="fas fa-paper-plane"></i></a> syahmiros96@gmail.com</p>
+                <p><a href="https://api.whatsapp.com/send?phone=601117178537"><i class="fas fa-phone-square-alt"></i></a> +(60) 11 - 1717 8537</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/syahmi96/"><i class="fab fa-linkedin" style="margin-right: 10px;"></i></a>
+                    <a href="https://github.com/Syahmiz"><i class="fab fa-github" style="margin-left: 10px;"></i></a>
+                </div>
+                    <a href="Syahmi Roslee Resume.pdf" target="_blank" class="resume">Resume</a>
+            </div>
+            <div class="contact-right">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="number" id="phone" placeholder="Phone no." required>
+                    <textarea id="message" rows="4" placeholder="Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- js functional submit -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+            SecureToken: "63d7a3f6-697f-4822-a59f-c83fc72aeec3",
+            To : 'syahmiros96@gmail.com',
+            From : 'syahmiros96@gmail.com',
+            Subject : "New Contact Form Enquiry",
+            Body : "Name: " + document.getElementById("name").value 
+                + "<br> Email: " + document.getElementById("email").value 
+                + "<br> Phone no: " + document.getElementById("phone").value
+                + "<br> Message: " + document.getElementById("message").value
+        }).then(
+        message => alert("Thank you for getting in touch.")
+        );
+    }
+</script>
+<!-- email section end-->
+
+</section>
+</body>
+</html>

@@ -1,0 +1,167 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes transitionSlide{
+  from{
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to{
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+span{
+  font-weight: bold;
+  color: yellow;
+}
+
+/* head section start */
+section#main{
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(206, 206, 206);
+  font-family: 'Poppins', sans-serif;
+  animation: transitionSlide 1s;
+}
+
+div.head{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+h1#title{
+  font-size: 50px;
+}
+
+.head p{
+  font-size: 25px;
+}
+/* head section end */
+
+/* pic section start */
+figure#img-div{
+  margin-top: 10px;
+  text-align: center;
+}
+
+#image{
+  width: 50%;
+  border-radius: 25px;
+}
+
+#img-caption{
+  font-weight: bold;
+}
+/* pic section end */
+
+/* info section start */
+.container{
+  width: 50%;
+  margin: 50px auto auto auto;
+  padding: 50px 0;
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+}
+.container #tribute-info{
+  text-align: center;
+  font-size: 20px;
+}
+.container ul{
+  margin: 100px 50px 0 50px;
+}
+.container ul li{
+  margin-top: 40px;
+  margin-left: 35px;
+  list-style: none;   /* Remove default bullets */
+}
+.container ul li::before{
+  content: "\2022";   /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: rgb(255, 196, 0);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -2em;
+}
+.container ul li b{
+  color: rgb(255, 196, 0);
+}
+.container h2.quotes{
+  margin-top: 100px;
+  color: yellow;
+  text-align: center;
+}
+/* info section end */
+
+/* link section start */
+footer{
+  margin-top: 100px;
+  padding: 50px 0;
+  background-color: rgb(145, 145, 145);
+  text-align: center;
+  font-size: 20px;
+}
+footer a#tribute-link{
+  color: rgb(0, 255, 0);
+  text-decoration: none;
+  display: inline-block;
+  transition: .5s;
+}
+footer a#tribute-link:hover{
+  color: yellow;
+  transform: translateY(-5px);
+}
+footer a#tribute-link:active{
+  opacity: 0.5;
+}
+/* link section end */
+
+@media(max-width: 480px){
+  /* head section start */
+  h1#title{
+    font-size: 25px;
+  }
+
+  .head p{
+    font-size: 13px;
+  }
+  /* head section end */
+
+  /* pic section start */
+  #image{
+    width: 98%;
+    border-radius: 10px;
+  }
+
+  #img-caption{
+    font-size: 11px;
+  }
+  /* pic section end */
+
+  /* info section start */
+  .container{
+    width: 98%;
+  }
+  .container #tribute-info{
+    font-size: 15px;
+  }
+  .container ul{
+    margin: 100px 40px 0 40px;
+  }
+  .container h2.quotes{
+    font-size: 20px;
+  }
+  /* info section end */
+
+  /* link section start */
+  footer{
+    font-size: 13px;
+  }
+  /* link section end */
+}

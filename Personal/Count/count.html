@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count</title>
+  <link rel="stylesheet" href="count.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- nav-bar section start -->
+  <div class="nav-bar">
+    <img src="images/moon.png" id="iconMoon">
+  </div>
+  <!-- nav-bar section end -->
+
+  <!-- count section start -->
+  <div class="main-box">
+    <div class="second-box">
+      <div class="upper">
+        <p>Count: </p>
+        <h1 id="count-number">0</h1>
+      </div>
+      <div class="middle">
+        <button id="increment" onclick="increment()">INCREMENT (+)</button>
+        <button id="decrement" onclick="decrement()">DECREMENT (-)</button>
+        <button id="save" onclick="save()">SAVE</button>
+        <button id="total" onclick="total()">TOTAL</button>
+        <button id="reset">RESET</button>
+      </div>
+    <div class="lower">
+      <p id="count-saved">Saved: </p>
+      <p id="count-total">Total: </p>
+    </div>
+    </div>
+  </div>
+  <script src="count.js"></script>
+  <script src="lightdark.js"></script>
+  <!-- count section start -->
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Silkscreen&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+
+</head>
+<body>
+
+<!-- header section start-->
+<section class="header">
+    <nav>
+        <label class="logo" onclick="window.location.reload()"><a href="index.html">S<span style="color: rgb(0, 38, 255)">z</span></a></label>
+        <ul>
+            <li><a href="index.html"><span style="color: yellow; font-size: 30px">.</span>Home</a></li>
+            <li><a href="skills.html"><span style="color: yellow; font-size: 30px">.</span>Skills</a></li>
+            <li><a href="projects.html"><span style="color: yellow; font-size: 30px">.</span>Projects</a></li>
+            <li><a href="contact.html"><span style="color: yellow; font-size: 30px">.</span>Contact</a></li>
+        </ul>
+        <label id="icon">
+            <i class="fa fa-bars"></i>
+        </label>
+    </nav>
+
+<!-- js tab show close for web app start-->
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script>
+$(document).ready(function(){
+    $('#icon').click(function(){
+        $('ul').toggleClass('show');
+    });
+});
+</script>
+<!-- header section end-->
+
+<!-- project section start-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title"><span style="color: yellow">P</span>ersonal</h1>
+        <div class="personal-list">
+            <div class="personal">
+                <h3><span style="color: yellow">P</span>ort<b>f</b>olio</h3>
+                <div class="layer">
+                    <h4>Hi, I'm <span style="color: yellow">Syahmi.</span></h4>
+                    <p>Visit my first <span style="color: yellow">portfolio</span> website.</p>
+                    <a href="https://syahmiz.github.io/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="personal">
+                <h3><b>I</b>n<b>c</b>rement</h3>
+                <div class="layer">
+                    <h4><b>C</b>ount <b>T</b>he <b>N</b>umber</h4>
+                    <p>For <b>example, number</b> of people <b>entered</b> the station. Just click <b>INCREMENT</b> to <b>start</b> the number.</p>
+                    <a href="Personal/Count/count.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="personal">
+                <h3>Coming Soon.</h3>
+                <div class="layer">
+                    <h4>Coming Soon.</h4>
+                    <p>Coming Soon.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="sub-title2">free<span style="color: yellow">C</span>ode<span style="color: yellow">C</span>amp</h1>
+        <div class="personal-list">
+            <div class="personal">
+                <h3><span style="color: yellow">S</span>urvey <span style="color: yellow">F</span>orm</h3>
+                <div class="layer">
+                    <h4>Portfolio Website <span style="color: yellow">Survey</span></h4>
+                    <p><span style="color: yellow">Survey</span> about my <span style="color: yellow">Portfolio Website</span> (level, project, and language).</p>
+                    <a href="freeCodeCamp/Survey Form/survey-form.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="personal">
+                <h3><span style="color: yellow">T</span>ribute <span style="color: yellow">P</span>age</h3>
+                <div class="layer">
+                    <h4><span style="color: yellow">K</span>halid al-<span style="color: yellow">W</span>alid</h4>
+                    <p><span style="color: yellow">Story</span> of Khalid al-Walid</p>
+                    <a href="freeCodeCamp/Tribute Page/tributepage.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="personal">
+                <h3>Coming Soon.</h3>
+                <div class="layer">
+                    <h4>Coming Soon.</h4>
+                    <p>Coming Soon.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- project section end-->
+
+</section>
+
+</body>
+</html>

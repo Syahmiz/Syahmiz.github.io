@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Silkscreen&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<!-- header section start-->
+<section class="header">
+    <nav>
+        <label class="logo" onclick="window.location.reload()"><a href="index.html">S<span style="color: rgb(0, 38, 255)">z</span></a></label>
+        <ul>
+            <li><a href="index.html"><span style="color: yellow; font-size: 30px">.</span>Home</a></li>
+            <li><a href="skills.html"><span style="color: yellow; font-size: 30px">.</span>Skills</a></li>
+            <li><a href="projects.html"><span style="color: yellow; font-size: 30px">.</span>Projects</a></li>
+            <li><a href="contact.html"><span style="color: yellow; font-size: 30px">.</span>Contact</a></li>
+        </ul>
+        <label id="icon">
+            <i class="fa fa-bars"></i>
+        </label>
+    </nav>
+
+<!-- js tab show close for web app start-->
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script>
+$(document).ready(function(){
+    $('#icon').click(function(){
+        $('ul').toggleClass('show');
+    });
+});
+</script>
+<!-- header section end-->
+
+<!-- about section start -->
+<div class="text-box">
+    <div class="row">
+        <h1 id="target">Hi, I'm <span class="auto-type"></span></h1>
+        <p>
+            I'm still working on <b>web development</b> and plan to do so in the <b>future</b>.
+            <span class="secondLine"><br></span><b>Fast learner,</b><b> competitive</b> and
+            <b>eager</b> to work on something <b>new</b>.
+            <br><br>
+            In addition to my <b>Electrical Engineering Technology</b> degree and other relevant <b>Engineering</b> courses, I have also taken several <b>Web Development</b> courses. 
+            Self-centered <b>HTML, CSS,</b> and <b>JavaScript</b> in preparation of top-tier transition for a <b>Web Development role.</b>
+        </p>
+    </div>
+</div>
+
+<!-- js typed-->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+    var typed = new Typed(".auto-type", {
+        strings: ["Syahmi."],
+        typeSpeed: 250,
+        backSpeed: 250,
+        loop: false
+    })
+</script>
+<!-- about section end -->
+
+</section>
+
+</body>
+</html>
